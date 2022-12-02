@@ -1,0 +1,262 @@
+---
+title: "SVC Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+source("L2 Dashboard.R")
+```
+All Segments
+===================================== 
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### SVCs per 100 Cases
+
+```{r}
+totalRatioPlot("All")
+```
+
+### Averages per month
+
+<!-- ```{r} -->
+<!-- knitr::kable(totalRatio("All"), align = 'c') -->
+<!-- ``` -->
+
+```{r, fig.height=1}
+knitr::kable(avgRatio("All"), align = 'c')
+```
+
+### Cases and 10*SVCs over time.
+
+```{r}
+totalSVCCasePlot("All")
+```
+
+Column {data-width=500}
+---------------------------------------------
+
+### Top 10 SVCs Last Month
+
+```{r}
+topResLastMonth("All")
+```
+SVCs in 2021
+```{r}
+knitr::kable(resBreakdown("All"), align = 'c')
+```
+
+Enterprise
+=====================================
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### SVCs per 100 Cases
+```{r}
+totalRatioPlot("Enterprise")
+```
+
+### Averages per month
+
+<!-- ```{r} -->
+<!-- knitr::kable(totalRatio("Enterprise"), align = 'c') -->
+<!-- ``` -->
+
+```{r, fig.height=1}
+knitr::kable(avgRatio("Enterprise"), align = 'c')
+```
+
+### Cases and 10*SVCs over time.
+
+```{r}
+totalSVCCasePlot("Enterprise")
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Top 10 SVCs Last Month
+```{r}
+topResLastMonth("Enterprise")
+```
+SVCs in 2021
+```{r}
+knitr::kable(resBreakdown("Enterprise"), align = 'c')
+```
+
+
+Mid Market 
+===================================== 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### SVCs per 100 Cases
+```{r}
+totalRatioPlot("Mid Market")
+```
+
+### Averages per month
+
+<!-- ```{r} -->
+<!-- knitr::kable(totalRatio("Mid Market"), align = 'c') -->
+<!-- ``` -->
+
+```{r, fig.height=1}
+knitr::kable(avgRatio("Mid Market"), align = 'c')
+```
+
+### Cases and 10*SVCs over time.
+
+```{r}
+totalSVCCasePlot("Mid Market")
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Top 10 SVCs Last Month
+```{r}
+topResLastMonth("Mid Market")
+```
+SVCs in 2021
+```{r}
+knitr::kable(resBreakdown("Mid Market"), align = 'c')
+```
+
+
+Small Business
+===================================== 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### SVCs per 100 Cases
+```{r}
+totalRatioPlot("Small")
+```
+
+### Averages per month
+
+<!-- ```{r} -->
+<!-- knitr::kable(totalRatio("Small"), align = 'c') -->
+<!-- ``` -->
+
+```{r, fig.height=1}
+knitr::kable(avgRatio("Small"), align = 'c')
+```
+
+### Cases and 10*SVCs over time.
+
+```{r}
+totalSVCCasePlot("Small")
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Top 10 SVCs Last Month
+```{r}
+topResLastMonth("Small")
+```
+SVCs in 2021
+```{r}
+knitr::kable(resBreakdown("Small"), align = 'c')
+```
+
+
+NetX
+===================================== 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### SVCs per 100 Cases
+```{r}
+totalRatioPlot("NetX")
+```
+
+### Averages per month
+
+<!-- ```{r} -->
+<!-- knitr::kable(totalRatio("NetX"), align = 'c') -->
+<!-- ``` -->
+
+```{r, fig.height=1}
+knitr::kable(avgRatio("NetX"), align = 'c')
+```
+
+### Cases and 10*SVCs over time.
+
+```{r}
+totalSVCCasePlot("NetX")
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Top 10 SVCs Last Month
+```{r}
+topResLastMonth("NetX")
+```
+SVCs in 2021
+```{r}
+knitr::kable(resBreakdown("NetX"), align = 'c')
+```
+
+Five Star
+===================================== 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### SVCs per 100 Cases
+```{r}
+totalRatioPlot("Five Star")
+```
+
+### Averages per month
+
+<!-- ```{r} -->
+<!-- knitr::kable(totalRatio("Five Star"), align = 'c') -->
+<!-- ``` -->
+
+```{r, fig.height=1}
+knitr::kable(avgRatio("Five Star"), align = 'c')
+```
+
+### Cases and 10*SVCs over time.
+
+```{r}
+totalSVCCasePlot("Five Star")
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Top 10 SVCs Last Month
+```{r}
+topResLastMonth("Five Star")
+```
+SVCs in 2021
+```{r}
+knitr::kable(resBreakdown("Five Star"), align = 'c')
+```
+
+<!-- Need to figure out method to select quarters and compare resolution numbers between two quarters -->
+
+<!-- Not Coded -->
+<!-- =====================================  -->
+<!-- Column {data-width=350} -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- ### Not Coded Resolution or Subresolution -->
+<!-- ```{r} -->
+<!-- knitr::kable(na_per) -->
+<!-- ``` -->
+
+<!-- Column {data-width=350} -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- ### Recently Not Coded -->
+<!-- ```{r} -->
+<!-- knitr::kable(recent_na) -->
+<!-- ``` -->
